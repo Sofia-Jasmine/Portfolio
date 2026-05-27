@@ -1,0 +1,216 @@
+.skills {
+  padding: 8rem 0;
+}
+
+.legend {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 100px;
+  padding: 0.45rem 1.25rem;
+}
+
+.legendDot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  margin-right: 0.3rem;
+  vertical-align: middle;
+}
+
+.legendDot.basic       { background: #00E5FF; }
+.legendDot.intermediate { background: #D946EF; }
+.legendDot.proficient   { background: #39FF14; }
+
+[data-theme='light'] .legendDot.basic       { background: #007A87; }
+[data-theme='light'] .legendDot.intermediate { background: #A21CAF; }
+[data-theme='light'] .legendDot.proficient   { background: #15803D; }
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 1.75rem;
+  box-shadow: var(--shadow-card);
+  transition: var(--transition-base);
+}
+
+.card:hover {
+  background: var(--bg-card-hover);
+  border-color: rgba(0, 245, 255, 0.22);
+  transform: translateY(-3px);
+  box-shadow: var(--glow-cyan), var(--shadow-card);
+}
+
+[data-theme='light'] .card:hover {
+  border-color: rgba(0, 153, 204, 0.28);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.4rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.iconWrap {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  background: rgba(0, 245, 255, 0.1);
+  border: 1px solid rgba(0, 245, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-cyan);
+  flex-shrink: 0;
+}
+
+[data-theme='light'] .iconWrap {
+  background: rgba(0, 153, 204, 0.1);
+  border-color: rgba(0, 153, 204, 0.25);
+}
+
+.categoryName {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  letter-spacing: 0.04em;
+}
+
+/* Skill rows */
+.skillList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.skillRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.skillName {
+  font-size: 0.85rem;
+  color: var(--text-primary);
+  font-weight: 500;
+  min-width: 110px;
+  white-space: nowrap;
+}
+
+/* Proficiency bar */
+.barRow {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.bars {
+  display: flex;
+  gap: 3px;
+}
+
+.bar {
+  display: block;
+  width: 18px;
+  height: 8px;
+  border-radius: 3px;
+  transform-origin: left;
+}
+
+.bar.empty {
+  background: var(--border-subtle);
+}
+
+/* Filled colour variants */
+.bar.filled.basic {
+  background: linear-gradient(90deg, #007A87, #00E5FF);
+  box-shadow: 0 0 6px rgba(0, 229, 255, 0.5);
+}
+
+.bar.filled.intermediate {
+  background: linear-gradient(90deg, #7A1C8E, #D946EF);
+  box-shadow: 0 0 6px rgba(217, 70, 239, 0.45);
+}
+
+.bar.filled.proficient {
+  background: linear-gradient(90deg, #006400, #39FF14);
+  box-shadow: 0 0 6px rgba(57, 255, 20, 0.5);
+}
+
+/* Level tag */
+.levelTag {
+  font-family: var(--font-display);
+  font-size: 0.62rem;
+  letter-spacing: 0.07em;
+  padding: 0.15rem 0.55rem;
+  border-radius: 100px;
+  white-space: nowrap;
+  font-weight: 700;
+}
+
+.tag_basic {
+  color: #00E5FF;
+  background: rgba(0, 229, 255, 0.08);
+  border: 1px solid rgba(0, 229, 255, 0.2);
+}
+
+.tag_intermediate {
+  color: #D946EF;
+  background: rgba(217, 70, 239, 0.08);
+  border: 1px solid rgba(217, 70, 239, 0.2);
+}
+
+.tag_proficient {
+  color: #39FF14;
+  background: rgba(57, 255, 20, 0.08);
+  border: 1px solid rgba(57, 255, 20, 0.2);
+}
+
+/* Light theme readable text and backgrounds */
+[data-theme='light'] .tag_basic {
+  color: #007A87;
+  background: rgba(0, 122, 135, 0.08);
+  border-color: rgba(0, 122, 135, 0.2);
+}
+[data-theme='light'] .tag_intermediate {
+  color: #A21CAF;
+  background: rgba(162, 28, 175, 0.08);
+  border-color: rgba(162, 28, 175, 0.2);
+}
+[data-theme='light'] .tag_proficient {
+  color: #15803D;
+  background: rgba(21, 128, 61, 0.08);
+  border-color: rgba(21, 128, 61, 0.2);
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .skillName {
+    min-width: 90px;
+  }
+  .bar {
+    width: 14px;
+  }
+}
