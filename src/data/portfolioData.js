@@ -36,7 +36,7 @@ export const education = [
     institution: 'M.C.C Matriculation Higher Secondary School',
     location: 'Chennai',
     period: '2024',
-    grade: '77%',
+    grade: '77.8%',
   },
   {
     degree: '10th Grade',
